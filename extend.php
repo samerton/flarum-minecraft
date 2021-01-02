@@ -1,10 +1,10 @@
 <?php
 
 use Flarum\Extend;
-use Flarum\Api\Serializer\UserSerializer;
+use Flarum\Api\Serializer\BasicUserSerializer;
 
 return [
-    (new Extend\ApiSerializer(UserSerializer::class))
+    (new Extend\ApiSerializer(BasicUserSerializer::class))
         ->attribute('mcname', function($serializer, $user, $attributes) {
             return $user->mcname;
         })
