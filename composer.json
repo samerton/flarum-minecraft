@@ -1,0 +1,21 @@
+{
+    "name": "samerton/flarum-minecraft",
+    "description": "Minecraft integration with Flarum",
+    "type": "flarum-extension",
+    "require": {
+        "flarum/core": ">=0.1.0-beta.15 <0.1.0-beta.16"
+    },
+    "autoload": {
+        "psr-4": {"Samerton\\FlarumMinecraft\\": "src/"}
+    },
+    "extra": {
+        "flarum-extension": {
+            "title": "Flarum Minecraft",
+            "icon": {
+                "name": "fas fa-cubes",
+                "backgroundColor": "#23923d",
+                "color": "#fff"
+            }
+        }
+    }
+}
