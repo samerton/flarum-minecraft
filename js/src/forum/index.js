@@ -6,9 +6,6 @@ app.initializers.add('samerton/flarum-minecraft', function () {
     const avatarUrl = this.attribute('avatarUrl');
     const uuid = this.attribute('uuid');
 
-    console.log('Getting avatar URL!');
-    console.log('Default is ' + avatarUrl);
-
     if (avatarUrl) {
       return avatarUrl;
     }
