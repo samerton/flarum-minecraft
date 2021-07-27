@@ -2,6 +2,9 @@
 
 use Flarum\Extend;
 use Flarum\Api\Serializer\BasicUserSerializer;
+use Flarum\User\Event\Saving;
+
+use Samerton\FlarumMinecraft\Listener\SaveMinecraftFields;
 
 return [
     (new Extend\Frontend('forum'))
@@ -12,5 +15,7 @@ return [
         })
         ->attribute('uuid', function($serializer, $user, $attributes) {
             return $user->uuid;
-        })
+        }),
+    (new Extend\Event)
+        ->listen(Saving::class, SaveMinecraftFields::class),
 ];
